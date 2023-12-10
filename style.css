@@ -5,11 +5,11 @@ body, h1, h2, p {
 }
 
 :root {
-    --background-color: #ffffff;
+    background-color: #ffffff;
 }
 @media (prefers-color-schemes: dark) {
     :root {
-        --background-color: #1e1e1e;
+        background-color: #1e1e1e;
     }
 }
 
