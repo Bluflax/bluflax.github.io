@@ -36,7 +36,7 @@ body {
 
 @font-face {
     font-family: "Sans";
-    src: url("/fonts/SF-Pro.ttf") format("truetype");
+    src: url("/fonts/SF-Pro-Text-Regular.otf") format("opentype");
 }
 
 header {
