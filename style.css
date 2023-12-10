@@ -17,6 +17,10 @@ html, body {
 @font-face {
     font-family: 'Avenir Next';
     src: url('./AvenirNextLTPro-Regular.otf') format('opentype');
+	font-family: 'Google Sans';
+	src: url('./ProductSans-Regular.ttf') format('truetype');
+	font-family: 'Smiley Sans';
+	src: url('./SmileySans-Oblique.ttf.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,10 +28,14 @@ html, body {
 @font-face {
     font-family: 'Avenir Next';
     src: url('AvenirNextLTPro-Medium.otf') format('opentype');
+	font-family: 'Google Sans';
+	src: url('./ProductSans-Bold.ttf') format('truetype');
+	font-family: 'Smiley Sans';
+	src: url('./SmileySans-Oblique.ttf.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 body {
-	font: 17px "Avenir Next", Avenir, "-apple-system", Helvetica, Arial, sans-serif;
+	font: 17px "Smiley Sans", "Google Sans", "-apple-system", "Avenir Next", Helvetica, Arial, sans-serif;
 	color: #666;
 	text-rendering: optimizeLegibility;
 }
