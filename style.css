@@ -18,9 +18,8 @@ html, body {
 	font-family: 'Smiley Sans';
 	src: url('/SmileySans-Oblique.ttf.woff2') format('woff2');
 body {
-	font: 17px "Smiley Sans", "-apple-system", "Avenir Next", Helvetica, Arial, sans-serif;
+	font: 17px "Smiley Sans", "-apple-system", Helvetica, Arial, sans-serif;
 	color: red;
-	text-rendering: optimizeLegibility;
 }
 
 /* Typography */
