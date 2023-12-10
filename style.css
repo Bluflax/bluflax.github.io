@@ -5,27 +5,25 @@ body, h1, h2, p {
 }
 
 :root {
-    background-color: #ffffff;
+    --background-color: #f4f4f4;
 }
 @media (prefers-color-schemes: dark) {
     :root {
-        background-color: #1e1e1e;
+        --background-color: #1e1e1e;
     }
 }
 
 body {
+    background: var(--background-color);
     font-family: "Sans", Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
     padding: 20px;
 }
 
 @font-face {
     font-family: "Sans";
-    src: url("/ProductSans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: oblique;
+    src: url("/SmileySans-Oblique.ttf") format("truetype");
 }
 
 header {
