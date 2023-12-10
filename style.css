@@ -31,7 +31,7 @@ body {
 
 @font-face {
     font-family: "Sans";
-    src: url("/SmileySans-Oblique.ttf") format("truetype");
+    src: url("/fonts/SF-Pro.ttf") format("truetype");
 }
 
 header {
