@@ -44,15 +44,21 @@ header {
 }
 
 h1 {
+    font-family: "Smiley Sans", "Sans", Arial, sans-serif;
     font-size: 48px;
     color: var(--header-color);
+    font-weight: normal;
     text-align: center;
 }
 
+@font-face {
+    font-family: "Smiley Sans";
+    src: url("/fonts/SmileySans-Oblique.ttf") format("truetype");
+
 h2, h3, h4, h5 {
     color: var(--default-color);
-    text-align: center;
     font-weight: normal;
+    text-align: center;
 }
 
 section {
