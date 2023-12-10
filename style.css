@@ -72,7 +72,7 @@ section {
 .largerimage {
     display: block;
     margin: 0 auto; /* 设置左右外边距为 auto，使其居中 */
-    width: 30px;
+    width: 200px;
     height: auto; /* 保持图片纵横比 */
     padding: 0 0px; 
 }
