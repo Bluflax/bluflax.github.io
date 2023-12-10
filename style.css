@@ -4,6 +4,15 @@ body, h1, h2, p {
     padding: 0;
 }
 
+:root {
+    --background-color: #ffffff;
+}
+@media (prefers-color-schemes: dark) {
+    :root {
+        --background-color: #1e1e1e;
+    }
+}
+
 body {
     font-family: "Sans", Arial, sans-serif;
     line-height: 1.6;
