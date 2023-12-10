@@ -5,11 +5,18 @@ body, h1, h2, p {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Smiley Sans", Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+}
+
+@font-face {
+    font-family: "Smiley Sans";
+    src: url("/SmileySans-Oblique.ttf.woff2") format("woff2");
+    font-weight: normal;
+    font-style: oblique;
 }
 
 header {
