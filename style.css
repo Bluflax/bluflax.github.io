@@ -4,6 +4,7 @@ body, h1, h2, p {
     padding: 0;
 }
 
+
 /* 默认背景颜色，浅色模式 */
 :root {
     --background-color: #f4f4f4;
@@ -19,6 +20,7 @@ body, h1, h2, p {
         --default-color: rgba(255, 255, 255, 0.3);
     }
 }
+
 
 body {
     background-color: var(--background-color);
