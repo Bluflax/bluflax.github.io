@@ -1,0 +1,10 @@
+  "name": "Zhere Next",
+  "start_url": "https://zhere.top",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
