@@ -86,18 +86,16 @@ header {
     text-decoration: none;
     background-color: #4CAF50; /* 你可以根据需要更改颜色 */
     color: white; /* 文本颜色 */
-    border-radius: 10px; /* 圆角大小 */
+    border-radius: 25px; /* 圆角大小 */
     text-align: center;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    left: 10px;
+    bottom: 50px;
+    right: 50px;
+    left: 50px;
     word-wrap: break-word;
 }
 
-.btnfloat:hover {
-    background-color: #2980b9;
-}
+
 
 footer {
     margin-top: 62px;
