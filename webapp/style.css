@@ -9,7 +9,7 @@ body, h1, h2, p {
 :root {
     --background-color: #DBDBDB;
     --text-color: #1e1e1e;
-    --container-color: rgba(0, 0, 0, 0.1);
+    --container-color: rgba(255, 255, 255, 0.9);
 }
 
 /* 深色模式下的样式 */
@@ -17,7 +17,7 @@ body, h1, h2, p {
     :root {
         --background-color: #1e1e1e;
         --text-color: #f4f4f4;
-        --container-color: rgba(255, 255, 255, 0.9);
+        --container-color: rgba(255, 255, 255, 0.1);
     }
 }
 
