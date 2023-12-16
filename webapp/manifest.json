@@ -1,0 +1,16 @@
+{
+  "name": "Zhere Next",
+  "short_name": "Zhere",
+  "description": "Launch Zhere Straight from you home screen."
+  "start_url": "/",
+  "display": "standalone",
+  "background-color": "#000000",
+  "theme-color": "#4CAF50",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
