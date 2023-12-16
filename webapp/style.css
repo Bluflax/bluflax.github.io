@@ -79,8 +79,8 @@ header {
 }
 
 .blocked img{
-    max-width: 90%;
-    border-radius: 7px;
+    max-width: 100%;
+    border-radius: 5px;
     margin-top: 10px
 }
 
