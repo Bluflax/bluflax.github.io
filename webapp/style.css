@@ -9,7 +9,7 @@ body, h1, h2, p {
 :root {
     --background-color: #f4f4f4;
     --text-color: #1e1e1e;
-    --container-color: rgba(0, 0, 0, 0.2);
+    --container-color: rgba(0, 0, 0, 0.1);
 }
 
 /* 深色模式下的样式 */
@@ -17,7 +17,7 @@ body, h1, h2, p {
     :root {
         --background-color: #1e1e1e;
         --text-color: #f4f4f4;
-        --container-color: rgba(255, 255, 255, 0.2);
+        --container-color: rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -49,7 +49,7 @@ header {
     src: url("/fonts/ProductSans.ttf") format("truetype");
 
 .mainheader {
-    font-size: 6em;
+    font-size: 8em;
     color: var(--text-color);
     font-weight: bold;
     text-align: left;
