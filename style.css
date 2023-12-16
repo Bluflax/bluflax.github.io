@@ -37,24 +37,26 @@ body {
 
 @font-face {
     font-family: "Sans";
-    src: url("/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+    src: url("/fonts/ProductSans.ttf") format("truetype");
 }
 
 header {
+    font-family: "Sans", Arial, sans-serif;
     padding: 10px;
 }
 
+
+@font-face {
+    font-family: "Sans";
+    src: url("/fonts/ProductSans.ttf") format("truetype");
+
 h1 {
-    font-family: "Smiley Sans", "Sans", Arial, sans-serif;
     font-size: 62px;
     color: var(--header-color);
     font-weight: normal;
     text-align: center;
 }
 
-@font-face {
-    font-family: "Smiley Sans";
-    src: url("/fonts/SmileySans-Oblique.ttf") format("truetype");
 }
 
 h2 {
@@ -64,18 +66,27 @@ h2 {
     text-align: center;
 }
 
-section {
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--default-color);
+    text-allign: center;
+    padding: 10px;
+}
+
+p {
     margin-top: 20px;
     color: var(--default-color);
     font-size: 12px;
     text-align: center;
 }
 
-.largerimage {
-    display: block;
+.background {
+    background-image: url('/assets/xmas.png');
     margin: 0 auto; /* 设置左右外边距为 auto，使其居中 */
-    width: 200px;
-    height: auto; /* 保持图片纵横比 */
+    background-size: cover;
+    text-allign: center;
     padding: 0 0px; 
 }
 
