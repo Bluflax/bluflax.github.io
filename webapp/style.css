@@ -84,6 +84,10 @@ header {
     margin-top: 10px
 }
 
+.eventheader {
+    font-weight: bold;
+}
+
 .btnfloat {
     display: inline-block;
     padding: 10px 20px;
