@@ -8,31 +8,29 @@ body, h1, h2, p {
 /* 默认背景颜色，浅色模式 */
 :root {
     --background-color: #f4f4f4;
-    --header-color: #1e1e1e;
-    --default-color: rgba(0, 0, 0, 0.3);
+    --text-color: #1e1e1e;
+    --container-color: rgba(0, 0, 0, 0.2);
 }
 
 /* 深色模式下的样式 */
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #1e1e1e;
-        --header-color: #f4f4f4;
-        --default-color: rgba(255, 255, 255, 0.3);
+        --text-color: #f4f4f4;
+        --container-color: rgba(255, 255, 255, 0.2);
     }
 }
 
 
 body {
     background-color: var(--background-color);
-    color: var(--default-color);
+    color: var(--text-color);
     font-family: "Sans", Arial, sans-serif;
+    font-size: 16px;
     padding: 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    max-width: 350px;
+    margin: 0 auto;
+
 }
 
 @font-face {
@@ -50,44 +48,55 @@ header {
     font-family: "Sans";
     src: url("/fonts/ProductSans.ttf") format("truetype");
 
-h1 {
-    font-size: 62px;
-    color: var(--header-color);
+.mainheader {
+    font-size: 6em;
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+}
+
+.mainsubtitle {
+    color: var(--text-color);
+    font-size: 1.2em;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
 }
 
-}
 
-h2 {
-    color: var(--default-color);
-    font-size: 15px;
-    font-weight: normal;
-    text-align: center;
-}
 
-.top-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--default-color);
-    text-allign: center;
+.blocked {
+    margin-top: 20px;
+    color: var(--text-color);
+    background-color: var(--container-color);
+    border-radius: 10px;
+    font-size: 1em;
+    text-align: left;
+    word-wrap: break-word;
     padding: 10px;
 }
 
-p {
-    margin-top: 20px;
-    color: var(--default-color);
-    font-size: 12px;
+
+
+.btnfloat {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #4CAF50; /* 你可以根据需要更改颜色 */
+    color: white; /* 文本颜色 */
+    border-radius: 10px; /* 圆角大小 */
     text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    word-wrap: break-word;
 }
 
-.background {
-    background-image: url('/assets/xmas.png');
-    margin: 0 auto; /* 设置左右外边距为 auto，使其居中 */
-    background-size: cover;
-    text-allign: center;
-    padding: 0 0px; 
+.btnfloat:hover {
+    background-color: #2980b9;
 }
 
 footer {
