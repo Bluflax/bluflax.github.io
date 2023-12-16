@@ -22,7 +22,8 @@
 
     <!-- content -->
     <div class="blocked">
-        <p id="mainpara" class="eventpara">Fetching Data...</p>
+        <p id="mainpara" class="eventpara">Welcome Zhere!</p>
+        <p id="para2" class="eventpara">...</p>
         <img src="/assets/xmas.jpg">
     </div>
     <script>
@@ -31,6 +32,14 @@
             .then(data => {
         // 将读取的文本内容设置为按钮的innerHTML
         document.getElementById('mainpara').innerHTML = data;
+      })
+        .catch(error => console.error('Error fetching file:', error));
+
+         fetch('https://minimal.app/r0qyQbVJ')
+            .then(response => response.text())
+            .then(data => {
+        // 将读取的文本内容设置为按钮的innerHTML
+        document.getElementById('para2').innerHTML = data;
       })
         .catch(error => console.error('Error fetching file:', error));
     </script>
