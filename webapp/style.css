@@ -78,7 +78,11 @@ header {
     padding: 10px;
 }
 
-
+.blocked img{
+    max-width: 90%;
+    border-radius: 7px;
+    margin-top: 10px
+}
 
 .btnfloat {
     display: inline-block;
