@@ -41,14 +41,14 @@ body {
 }
 
 header {
-    font-family: "Sans", Arial, sans-serif;
+    font-family: "SansBold", Arial, sans-serif;
     padding: 10px;
 }
 
 
 @font-face {
-    font-family: "Sans";
-    src: url("/fonts/ProductSans.ttf") format("truetype");
+    font-family: "SansBold";
+    src: url("/fonts/ProductSans-bold.ttf") format("truetype");
 
 .mainheader {
     font-size: 90px;
@@ -61,7 +61,7 @@ header {
 
 .mainsubtitle {
     color: var(--text-color);
-    font-size: 1.2em;
+    font-size: 20px;
     font-weight: normal;
     text-align: left;
     margin-top: 60px;
@@ -77,7 +77,6 @@ header {
     text-align: left;
     word-wrap: break-word;
     padding: 10px;
-    left: 30px;;
 }
 
 .blocked img{
