@@ -101,12 +101,9 @@ header {
     right: 50px;
     left: 50px;
     word-wrap: break-word;
-    box-shadow: 0 0 48px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.5);
 }
 
-.btnfloat:hover {
-    box-shadow: 0 0 52px rgba(0, 0, 0, 0.4)
-}
 
 footer {
     margin-top: 62px;
