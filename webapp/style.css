@@ -94,14 +94,14 @@ header {
     text-decoration: none;
     background-color: #4CAF50; /* 你可以根据需要更改颜色 */
     color: white; /* 文本颜色 */
-    border-radius: 25px; /* 圆角大小 */
+    border-radius: 12px; /* 圆角大小 */
     text-align: center;
     position: fixed;
     bottom: 50px;
     right: 50px;
     left: 50px;
     word-wrap: break-word;
-    box-shadow: 0 0 48px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
 }
 
 
