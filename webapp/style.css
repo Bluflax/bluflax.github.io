@@ -107,14 +107,15 @@ header {
     padding: 10px 16px;
     text-decoration: none;
     background-color: var(--container-color); /* 你可以根据需要更改颜色 */
-    border-radius: 5px; /* 圆角大小 */
+    border-radius: 3px; /* 圆角大小 */
     font-size: 14px;
     text-align: center;
     word-wrap: break-word;
     margin-top: 10px;
-    margin-left: auto;
+    margin-left: 3px;
+    margin-bottom: 3.7px;
     box-shadow: 0 0 40px var(--shadow-colorsubtle);
-    width: calc(100% - 32.5px);
+    width: calc(100% - 37.5px);
 }
 
 #GotoDecotext {
