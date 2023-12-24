@@ -1,7 +1,6 @@
 /* Reset some default styles */
-body, h1, h2, p {
+h1, h2, p {
     margin: 0;
-    padding: 0;
 }
 
 
@@ -11,6 +10,7 @@ body, h1, h2, p {
     --text-color: #1e1e1e;
     --container-color: rgba(255, 255, 255, 0.9);
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-colorsubtle: rgba(0, 0, 0, 0.1);
 }
 
 /* 深色模式下的样式 */
@@ -20,6 +20,7 @@ body, h1, h2, p {
         --text-color: #f4f4f4;
         --container-color: rgba(255, 255, 255, 0.1);
         --shadow-color: rgba(255, 255, 255, 0.3);
+        --shadow-colorsubtle: rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -71,6 +72,7 @@ header {
 
 .blocked {
     margin-top: 10px;
+    margin-bottom: 20px;
     color: var(--text-color);
     background-color: var(--container-color);
     border-radius: 10px;
@@ -88,6 +90,34 @@ header {
 
 .eventheader {
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.btncontext {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    background-color: var(--container-color); /* 你可以根据需要更改颜色 */
+    color: white; /* 文本颜色 */
+    border-radius: 5px; /* 圆角大小 */
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-left: auto;
+    box-shadow: 0 0 40px var(--shadow-colorsubtle);
+    width: calc(100% - 32.5px);
+}
+
+#GotoDecotext {
+    text-decoration: none;
+    color: white;
+}
+
+#GotoSurveytext {
+    text-decoration: none;
+    color: white;
 }
 
 .btnfloat {
@@ -106,6 +136,10 @@ header {
     box-shadow: 0 0 40px var(--shadow-color);
 }
 
+#GotoDecotextFloat {
+    text-decoration: none;
+    color: white;
+}
 
 footer {
     margin-top: 62px;
