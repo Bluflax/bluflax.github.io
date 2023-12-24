@@ -99,7 +99,7 @@ header {
     padding: 10px 16px;
     text-decoration: none;
     background-color: var(--container-color); /* 你可以根据需要更改颜色 */
-    color: white; /* 文本颜色 */
+    color: var(--text-color); /* 文本颜色 */
     border-radius: 5px; /* 圆角大小 */
     font-size: 14px;
     text-align: center;
