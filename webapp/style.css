@@ -6,7 +6,7 @@ h1, h2, p {
 
 /* 默认背景颜色，浅色模式 */
 :root {
-    --background-color: #F2F1F6;
+    --background-color: #EDEDED;
     --text-color: #1e1e1e;
     --container-color: rgba(255, 255, 255, 0.9);
     --shadow-color: rgba(0, 0, 0, 0.3);
@@ -16,7 +16,7 @@ h1, h2, p {
 /* 深色模式下的样式 */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #000000;
+        --background-color: #111111;
         --text-color: #f4f4f4;
         --container-color: rgba(255, 255, 255, 0.1);
         --shadow-color: rgba(255, 255, 255, 0.3);
@@ -99,7 +99,6 @@ header {
     padding: 10px 16px;
     text-decoration: none;
     background-color: var(--container-color); /* 你可以根据需要更改颜色 */
-    color: var(--text-color); /* 文本颜色 */
     border-radius: 5px; /* 圆角大小 */
     font-size: 14px;
     text-align: center;
@@ -112,12 +111,12 @@ header {
 
 #GotoDecotext {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 #GotoSurveytext {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 .btnfloat {
@@ -125,7 +124,6 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     background-color: #4CAF50; /* 你可以根据需要更改颜色 */
-    color: white; /* 文本颜色 */
     border-radius: 12px; /* 圆角大小 */
     text-align: center;
     position: fixed;
