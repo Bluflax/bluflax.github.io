@@ -18,13 +18,27 @@
     
 <body>
     <h1 class="mainheader">Zhere Next</h1>
-    <h2 class="mainsubtitle">Merry Xmas!</h2>
 
     <!-- content -->
+
+    <h2 class="mainsubtitle">Do you know me?</h2>
     <div class="blocked">
-        <p id="title" class="eventheader">Welcome Zhere!</p>
-        <p id="para" class="eventpara">...</p>
-        <img src="/assets/xmas.jpg">
+        <p class="eventpara">你了解我吗？快来答题测试！</p>
+        <div class="btncontext">
+            <a href="https://bit.ly/youknowbfl" id="GotoSurveytext" target="_blank">查看</a>
+        </div>
+    </div>
+
+
+
+    <h2 class="mainsubtitle">圣诞节</h2>
+    <div class="blocked">
+        <p id="title" class="eventheader">装饰我的圣诞树!</p>
+        <p class="eventpara">Fetching Data...</p>
+        <img src="D:\new\BFL\Web\bluflax.github.io-main\bluflax.github.io-main\xmas.jpg">
+        <div class="btncontext">
+            <a href="https://bit.ly/bflstree" id="GotoDecotext" target="_blank">去留言</a>
+        </div>
     </div>
     <script>
         fetch('/webapp/title.txt')
@@ -44,9 +58,9 @@
         .catch(error => console.error('Error fetching file:', error));
     </script>
 
-    <div class="btn">
-        <a href="https://bit.ly/bflstree" id="btnfloat" class="btnfloat" target="_blank">Go to Decomytree.com</a>
-    </div>
+    <!--div class="btnfloat">
+        <a href="https://bit.ly/bflstree" id="GotoDecotextFloat" target="_blank">Go to Decomytree.com</a>
+    </div-->
     
     <footer>
         <p>2023 BF_located</p>
