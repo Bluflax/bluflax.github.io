@@ -79,18 +79,26 @@ header {
     font-size: 1em;
     text-align: left;
     word-wrap: break-word;
-    padding: 15px;
+    padding: 5px;
+    padding-top: 10px;
 }
 
 .blocked img{
-    max-width: 100%;
+    width: calc(100% - 20px);
     border-radius: 3px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 .eventheader {
     font-weight: bold;
+    margin-left: 10px;
     margin-bottom: 5px;
+}
+
+.eventpara {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
