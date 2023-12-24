@@ -29,7 +29,7 @@ body {
     color: var(--text-color);
     font-family: "Sans", Arial, sans-serif;
     font-size: 16px;
-    padding: 20px;
+    padding: 30px;
     max-width: 350px;
     margin: 0 auto;
 
@@ -41,45 +41,54 @@ body {
 }
 
 header {
-    font-family: "Sans", Arial, sans-serif;
+    font-family: "SansBold", Arial, sans-serif;
     padding: 10px;
 }
 
 
 @font-face {
-    font-family: "Sans";
-    src: url("/fonts/ProductSans.ttf") format("truetype");
+    font-family: "SansBold";
+    src: url("/fonts/ProductSans-bold.ttf") format("truetype");
 }
 
 .mainheader {
-    font-size: 6em;
+    font-size: 40px;
     color: var(--text-color);
     font-weight: bold;
     text-align: left;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 
 .mainsubtitle {
     color: var(--text-color);
-    font-size: 1.2em;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: bold;
     text-align: left;
+    margin-top: 10px;
 }
 
 
 .blocked {
-    margin-top: 20px;
+    margin-top: 10px;
     color: var(--text-color);
     background-color: var(--container-color);
     border-radius: 10px;
     font-size: 1em;
     text-align: left;
     word-wrap: break-word;
-    padding: 10px;
+    padding: 15px;
 }
 
+.blocked img{
+    max-width: 100%;
+    border-radius: 3px;
+    margin-top: 10px;
+}
 
+.eventheader {
+    font-weight: bold;
+}
 
 .btnfloat {
     display: inline-block;
@@ -87,13 +96,14 @@ header {
     text-decoration: none;
     background-color: #4CAF50; /* 你可以根据需要更改颜色 */
     color: white; /* 文本颜色 */
-    border-radius: 25px; /* 圆角大小 */
+    border-radius: 12px; /* 圆角大小 */
     text-align: center;
     position: fixed;
     bottom: 50px;
     right: 50px;
     left: 50px;
     word-wrap: break-word;
+    box-shadow: 0 0 40px var(--shadow-color);
 }
 
 
