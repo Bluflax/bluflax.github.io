@@ -115,7 +115,7 @@ header {
     margin-left: 3px;
     margin-bottom: 3.7px;
     box-shadow: 0 0 40px var(--shadow-colorsubtle);
-    width: calc(100% - 37.5px);
+    width: calc(100% - 38px);
 }
 
 #GotoDecotext {
