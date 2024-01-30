@@ -1,0 +1,104 @@
+/* 默认背景颜色，浅色模式 */
+:root {
+    --background-color: #EDEDED;
+    --text-color: #1e1e1e;
+    --container-color: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-colorsubtle: rgba(0, 0, 0, 0.1);
+    --notice-color: rgba(255, 215, 58, 0.7);
+}
+
+/* 深色模式下的样式 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #111111;
+        --text-color: #f4f4f4;
+        --container-color: rgba(255, 255, 255, 0.1);
+        --shadow-color: rgba(255, 255, 255, 0.3);
+        --shadow-colorsubtle: rgba(255, 255, 255, 0.1);
+        --notice-color: rgba(255, 222, 92, 0.8);
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-family: "NW", system-ui, -apple-system;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.main {
+    text-align: center;
+    padding: 20px;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vh;
+}
+
+.Header, .block {
+    opacity: 0;
+    transition: transform 0.1s linear, opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+h1 {
+    font-family: "BW", system-ui, -apple-system;
+}
+
+p {
+    font-family: "NW", system-ui, -apple-system;
+}
+
+#info {
+    position: fixed;
+    bottom: 7px;
+    left: 10px;
+    opacity: 0.3;
+    font-size: 7px;
+    font-family: "NW", system-ui, -apple-system;
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        text-align: left;
+        justify-content: left;
+        padding: 30px 20px 0px 20px;
+    }
+    h1 {
+        text-align: left;
+    }
+}
+
+
+@font-face {
+    font-family: "NW";
+    src: url("PolySans Neutral Wide.woff") format("woff");
+}
+@font-face {
+    font-family: "BW";
+    src: url("PolySans Bulky Wide.woff") format("woff");
+}
+@font-face {
+    font-family: "Neutral";
+    src: url("PolySans Neutral.woff") format("woff");
+}
+@font-face {
+    font-family: "Slim";
+    src: url("PolySans Slim.woff") format("woff");
+}
+@font-face {
+    font-family: "SW";
+    src: url("PolySans Slim Wide.woff") format("woff");
+}
