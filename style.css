@@ -114,14 +114,27 @@ p {
         justify-content: left;
         padding: 30px 20px 0px 20px;
     }
+    #ctop {
+        height: 150px;
+        top: 0px;
+        background: linear-gradient(to bottom, var(--background-color) 65%, var(--background-transparent) 90%);
+    }
     h1 {
         text-align: left;
         left: 20px;
+        max-width: 85%;
         font-size: 36px;
         transform-origin: top left;
     }
     h1.scrolled {
+        width: 50%;
         transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+@media (max-width: 415px) {
+    .filler {
+        height: 155px;
     }
 }
 
