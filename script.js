@@ -1,12 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeText = document.querySelector(".welcome-text");
     const Header = document.querySelector(".Header");
-    const Block = document.querySelector(".block");
+    const Box = document.querySelectorAll(".box");
+    const Above = document.querySelectorAll(".above");
 
     setTimeout(function() {
         welcomeText.style.opacity = "1";
         Header.style.transform = "translateY(30px)";
-        Block.style.transform = "translateY(30px)";
+        Box.forEach(box => {
+            box.style.transform = "translateY(40px)";
+        });
+        Above.forEach(above => {
+            above.style.transform = "translateY(40px)";
+        });
 
     }, 200);
 
@@ -18,9 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(function() {
         Header.style.opacity = 1;
-        Block.style.opacity = 1;
         Header.style.transform = "translateY(-0px)";
-        Block.style.transform = "translateY(-0px)";
+        Box.forEach(box => {    
+            box.style.opacity = 1;
+            box.style.transform = "translateY(-0px)";
+        });
+        Above.forEach(above => {
+            above.style.opacity = 1;
+            above.style.transform = "translateY(-0px)";
+        });
     }, 2200);
 
     setTimeout(function() {
