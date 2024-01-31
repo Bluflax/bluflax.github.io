@@ -122,6 +122,7 @@ h1 {
     position: fixed;
     width: 100%;
     top: 50px;
+    font-size: 40px;
     font-family: "NW", system-ui, -apple-system;
     font-weight: normal;
 }
@@ -139,7 +140,7 @@ h1.scrolled {
 }
 
 .filler {
-    height: 110px;
+    height: 120px;
 }
 
 #f2 {
@@ -226,9 +227,9 @@ p {
 }
 
 /* filler height aff title wrapping */
-@media (max-width: 370px) {
+@media (max-width: 462px) {
     .filler {
-        height: 155px;
+        height: 170px;
     }
 }
 
