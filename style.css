@@ -1,6 +1,7 @@
 /* 默认背景颜色，浅色模式 */
 :root {
     --background-color: #EDEDED;
+    --background-transparent: rgba(237, 237, 237, 0);
     --text-color: #1e1e1e;
     --container-color: rgba(255, 255, 255, 0.9);
     --shadow-color: rgba(0, 0, 0, 0.3);
@@ -12,6 +13,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #111111;
+        --background-transparent: rgba(17, 17, 17, 0);
         --text-color: #f4f4f4;
         --container-color: rgba(255, 255, 255, 0.1);
         --shadow-color: rgba(255, 255, 255, 0.3);
@@ -27,6 +29,7 @@ body {
     height: 100vh;
     margin: 0;
     color: var(--text-color);
+    /*background-color: var(--background-color);*/
     background-color: var(--background-color);
 }
 
@@ -36,6 +39,7 @@ body {
     font-weight: normal;
     opacity: 0;
     position: absolute;
+    margin-bottom: 5%;
     transition: opacity 0.2s ease-in-out, transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
@@ -53,7 +57,40 @@ body {
 }
 
 h1 {
-    font-family: "BW", system-ui, -apple-system;
+    z-index: 3;
+    position: fixed;
+    width: 100vh;
+    top: 50px;
+    font-family: "NW", system-ui, -apple-system;
+    font-weight: normal;
+}
+
+h1.scrolled {
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.clipped {
+    z-index: 2;
+    position: fixed;
+    left: 0px;
+    width:200vh;
+    left: 0px;
+}
+
+.filler {
+    height: 100px;
+}
+
+#ctop {
+    height: 120px;
+    top: 0px;
+    background: linear-gradient(to bottom, var(--background-color) 60%, var(--background-transparent));
+}
+
+#cbottom {
+    height: 40px;
+    bottom: 0px;
+    background: linear-gradient(to bottom, var(--background-transparent), var(--background-color));
 }
 
 p {
@@ -61,6 +98,7 @@ p {
 }
 
 #info {
+    z-index: 3;
     position: fixed;
     bottom: 7px;
     left: 10px;
@@ -78,6 +116,12 @@ p {
     }
     h1 {
         text-align: left;
+        left: 20px;
+        font-size: 36px;
+        transform-origin: top left;
+    }
+    h1.scrolled {
+        transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
 }
 
