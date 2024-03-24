@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (passcode === '352636') {
 //--------------------------------------------------------------------------------
 
-        input.blur();
+        Header.focus();
 
         window.scrollTo({
             top:0,
@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             welcomeText.style.opacity = "0";
             welcomeText.style.transform = "translateY(-30px)";
+            welcomeText.style.zIndex = '1';
 
         }, 100);
 
