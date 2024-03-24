@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.style.overflow = "hidden";
 
-    main.style.opacity = 1;
+    main.style.opacity = 0.3;
 
     setTimeout(function() {
         welcomeText.style.opacity = "1";
@@ -78,14 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(function() {
             main.style.filter = "blur(0px)";
-            Header.style.opacity = 1;
+            main.style.opacity = 1;
             Header.style.transform = "translateY(-0px)";
             Box.forEach(box => {    
-                box.style.opacity = 1;
                 box.style.transform = "translateY(-0px)";
             });
             Above.forEach(above => {
-                above.style.opacity = 1;
                 above.style.transform = "translateY(-0px)";
             });
         }, 300);
