@@ -1,14 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeText = document.querySelector(".welcome-text");
+    const main = document.querySelector(".main");
     const Header = document.querySelector(".Header");
     const Box = document.querySelectorAll(".box");
     const Box2 = document.getElementById("box2");
     const Above = document.querySelectorAll(".above");
     const Filler = document.querySelector(".filler");
     const Ctop = document.querySelector(".clipped");
+    const toady = new Date();
+    const GK = new Date(toady.getFullYear(), 5, 11);
+    const timebtwnG = GK.getTime() - toady.getTime();
+    const daysbtwnG = Math.ceil(timebtwnG / (1000 * 3600 * 24));
+    const countdwnfinalG = document.getElementById("s1");
+    countdwnfinalG.textContent = daysbtwnG + " Days";
 
     const inputs = document.querySelectorAll('.digits input');
     const Lastinput = document.querySelector(".lastinput");
+
+    document.body.style.overflow = "hidden";
+
+    main.style.opacity = 1;
 
     setTimeout(function() {
         welcomeText.style.opacity = "1";
@@ -56,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
             behaviou: 'auto'
         })
 
+        document.body.style.overflow = "auto";
+
         setTimeout(function() {
             welcomeText.style.opacity = "0";
             welcomeText.style.transform = "translateY(-30px)";
@@ -64,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 100);
 
         setTimeout(function() {
+            main.style.filter = "blur(0px)";
             Header.style.opacity = 1;
             Header.style.transform = "translateY(-0px)";
             Box.forEach(box => {    
@@ -93,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     Ctop.style.transform = "translateY(-50px)";
                     Filler.style.height = "60px";
                     Box2.style.filter = "blur(0px)";
+                    Box2.style.opacity = 1;
                 }
                 else {
                     Header.style.transform = "translateY(0px)"
@@ -101,7 +116,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     },200);
                     Ctop.style.transform = "translateY(0px)"
                     Filler.style.height = orgheight;
-                    Box2.style.filter = "blur(20px)";
+                    this.setTimeout(function() {
+                        Box2.style.filter = "blur(20px)";
+                        Box2.style.opacity = 0.2;
+                    },300)
                 }
             });
         }, 300);
