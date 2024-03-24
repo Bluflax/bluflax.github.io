@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const Header = document.querySelector(".Header");
     const Box = document.querySelectorAll(".box");
     const Above = document.querySelectorAll(".above");
+    const Filler = document.querySelector(".filler");
+    const Ctop = document.querySelector(".clipped");
 
     setTimeout(function() {
         welcomeText.style.opacity = "1";
@@ -35,15 +37,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, 2200);
 
+    var orgheight = getComputedStyle(Filler).height;
+
     setTimeout(function() {
         window.addEventListener("scroll", function() {
-            const scroll=window.scrollY > 10;
+            const scroll=window.scrollY > 1;
             Header.classList.toggle("scrolled", scroll);
             if (scroll) {
-                Header.style.transform = "translateY(-40px) scale(0.7)"
+                Header.style.transform = "translateY(-60px)"
+                Header.style.opacity = 0;
+                Header.style.transition = "opacity 0.2s ease-in-out, transform 0.6s cubic-bezier(0.210, 0.000, 0.000, 1.000)";
+                Ctop.style.transform = "translateY(-50px)";
+                Filler.style.height = "50px";
             }
             else {
-                Header.style.transform = "translateY(0px) scale(1)"
+                Header.style.transform = "translateY(0px)"
+                Header.style.opacity = 1;
+                Ctop.style.transform = "translateY(0px)"
+                Filler.style.height = orgheight;
             }
         });
     }, 2200);
