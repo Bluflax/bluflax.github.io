@@ -100,12 +100,15 @@ input:focus {
     height: 100vh;
     width: 100%;
     z-index: 2;
+    filter: blur(20px);
+    opacity: 0;
+    transition: filter 0.4s ease-out, opacity 0.5s ease-out;
 }
 
 /* transformation required*/
 .Header, .box, .above {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-in-out; 
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out; 
 }
 
 .box {
@@ -118,6 +121,7 @@ input:focus {
 
 #box2 {
     filter: blur(20px);
+    opacity: 0.2;
 }
 
 .above {
@@ -141,6 +145,12 @@ input:focus {
     background-color: var(--container-color);
 }
 
+.cardimg {
+    width: calc(100% + 25px);
+    border-radius: 7.4px;
+    translate: -13px 2px;
+}
+
 #blk1, #blk2, #blk5, #blk6 {
     width: calc(50% - 53px);
 }
@@ -148,6 +158,14 @@ input:focus {
 #blk3, #blk4, #blk7, #blk8 {
     width: calc(25% - 53px);
 }
+
+#blk2 {
+    color: #1e1e1e;
+    background-image: url("https://s2.loli.net/2024/03/25/kJ92Xp81o4AQmLf.png");
+    background-size: 110% auto;
+    background-position: center;
+}
+
 
 h1 {
     z-index: 4;
