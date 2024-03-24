@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const welcomeText = document.querySelector(".welcome-text");
     const Header = document.querySelector(".Header");
     const Box = document.querySelectorAll(".box");
+    const Box2 = document.getElementById("box2");
     const Above = document.querySelectorAll(".above");
     const Filler = document.querySelector(".filler");
     const Ctop = document.querySelector(".clipped");
-    const wtxt = document.querySelector(".welcometexted");
 
     const inputs = document.querySelectorAll('.digits input');
     const Lastinput = document.querySelector(".lastinput");
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             welcomeText.style.opacity = "0";
             welcomeText.style.transform = "translateY(-30px)";
-            welcomeText.style.zIndex = '1';
+            welcomeText.style.zIndex = '0';
 
         }, 100);
 
@@ -92,9 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     Header.style.transition = "opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.210, 0.000, 0.000, 1.000), filter 0.4s ease-in-out";
                     Ctop.style.transform = "translateY(-50px)";
                     Filler.style.height = "60px";
-                    Box.forEach(box => {
-                        box.style.filter = "blur(0px)";
-                    });
+                    Box2.style.filter = "blur(0px)";
                 }
                 else {
                     Header.style.transform = "translateY(0px)"
@@ -103,9 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     },200);
                     Ctop.style.transform = "translateY(0px)"
                     Filler.style.height = orgheight;
-                    Box.forEach(box => {
-                        box.style.filter = "blur(20px)";
-                    });
+                    Box2.style.filter = "blur(20px)";
                 }
             });
         }, 300);
