@@ -283,9 +283,6 @@ p {
     .block {
         width: calc(50% - 53px) !important;
     }
-    #devexp {
-        opacity: 0;
-    }
 }
 
 @media (max-width: 500px) {
