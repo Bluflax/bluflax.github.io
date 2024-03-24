@@ -3,7 +3,7 @@
     --background-color: #EDEDED;
     --background-transparent: rgba(237, 237, 237, 0);
     --text-color: #1e1e1e;
-    --container-color: rgba(255, 255, 255, 0.96);
+    --container-color: rgba(255, 255, 255, 1.0);
     --shadow-color: rgba(0, 0, 0, 0.3);
     --shadow-colorsubtle: rgba(0, 0, 0, 0.03);
     --notice-color: rgba(255, 215, 58, 0.7);
@@ -15,7 +15,7 @@
         --background-color: #111111;
         --background-transparent: rgba(17, 17, 17, 0);
         --text-color: #f4f4f4;
-        --container-color: rgba(255, 255, 255, 0.04);
+        --container-color: rgba(255, 255, 255, 0.01);
         --shadow-color: rgba(255, 255, 255, 0.3);
         --shadow-colorsubtle: rgba(255, 255, 255, 0.03);
         --notice-color: rgba(255, 222, 92, 0.8);
@@ -87,8 +87,7 @@ body {
     font-size: 20px;
 }
 
-#blk1, #blk2, #blk5, #blk6 {
-    width: calc(50% - 53px);
+.block {
     height: fit-content;
     margin: 10px;
     margin-top: 12px;
@@ -97,24 +96,17 @@ body {
     padding-left: 15px;
     padding-right: 14px;
     border-radius: 10px;
-    border: 2px solid var(--shadow-colorsubtle);
+    border: 1px solid var(--shadow-colorsubtle);
     background-color: var(--container-color);
-    box-shadow: 0 0 40px var(--shadow-colorsubtle);
+    backdrop-filter: brightness(5);
+}
+
+#blk1, #blk2, #blk5, #blk6 {
+    width: calc(50% - 53px);
 }
 
 #blk3, #blk4, #blk7, #blk8 {
     width: calc(25% - 53px);
-    height: fit-content;
-    margin: 10px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 14px;
-    border-radius: 10px;
-    border: 2px solid var(--shadow-colorsubtle);
-    background-color: var(--container-color);
-    box-shadow: 0 0 40px var(--shadow-colorsubtle);
 }
 
 h1 {
