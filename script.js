@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
     
     if (passcode === '352636') {
 //--------------------------------------------------------------------------------
+
+        window.scrollTo({
+            top:0,
+            behaviou: 'auto'
+        })
+
         setTimeout(function() {
             welcomeText.style.opacity = "0";
             welcomeText.style.transform = "translateY(-30px)";
