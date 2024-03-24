@@ -13,6 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const daysbtwnG = Math.ceil(timebtwnG / (1000 * 3600 * 24));
     const countdwnfinalG = document.getElementById("s1");
     countdwnfinalG.textContent = daysbtwnG + " Days";
+    var img3 = this.getElementById('imgblk3');
+    var src3 = img3.getAttribute('data-src');
+    var img4 = this.getElementById('imgblk4');
+    var src4 = img4.getAttribute('data-src');
+
+        function imgloaded() {
+            img3.setAttribute('src', src3);
+            img3.removeAttribute('data-src');
+            img4.setAttribute('src', src4);
+            img4.removeAttribute('data-src');
+        }
 
     const inputs = document.querySelectorAll('.digits input');
     const Lastinput = document.querySelector(".lastinput");
@@ -68,6 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
 
         document.body.style.overflowY = "auto";
+
+        imgloaded();
 
         setTimeout(function() {
             welcomeText.style.opacity = "0";
