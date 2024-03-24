@@ -107,7 +107,6 @@ input:focus {
 
 /* transformation required*/
 .Header, .box, .above {
-    opacity: 0.2;
     transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out; 
 }
 
@@ -130,6 +129,7 @@ input:focus {
     padding: 5px;
     margin-left: 23px;
     font-size: 20px;
+    z-index: 1;
 }
 
 .block {
@@ -143,6 +143,7 @@ input:focus {
     border-radius: 10px;
     border: 1px solid var(--shadow-colorsubtle);
     background-color: var(--container-color);
+    z-index: 2;
 }
 
 .cardimg {
