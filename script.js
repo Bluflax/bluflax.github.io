@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const Above = document.querySelectorAll(".above");
     const Filler = document.querySelector(".filler");
     const Ctop = document.querySelector(".clipped");
+    const wtxt = document.querySelector(".welcometexted");
 
     const inputs = document.querySelectorAll('.digits input');
-    const submitButton = document.querySelector('button');
+    const Lastinput = document.querySelector(".lastinput");
 
     setTimeout(function() {
         welcomeText.style.opacity = "1";
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (passcode === '352636') {
 //--------------------------------------------------------------------------------
 
-        Header.focus();
+        Lastinput.blur();
 
         window.scrollTo({
             top:0,
