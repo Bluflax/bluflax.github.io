@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputs = document.querySelectorAll('.digits input');
     const Lastinput = document.querySelector(".lastinput");
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflowY = "hidden";
 
     main.style.opacity = 0.3;
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
             behaviou: 'auto'
         })
 
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "auto";
 
         setTimeout(function() {
             welcomeText.style.opacity = "0";
