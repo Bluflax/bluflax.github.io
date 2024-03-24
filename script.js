@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const scroll=window.scrollY > 1;
             Header.classList.toggle("scrolled", scroll);
             if (scroll) {
-                Header.style.transform = "translateY(-60px)"
+                Header.style.transform = "translateY(-70px)"
                 Header.style.opacity = 0;
-                Header.style.transition = "opacity 0.2s ease-in-out, transform 0.6s cubic-bezier(0.210, 0.000, 0.000, 1.000)";
+                Header.style.transition = "opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.210, 0.000, 0.000, 1.000)";
                 Ctop.style.transform = "translateY(-50px)";
                 Filler.style.height = "50px";
             }
