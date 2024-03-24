@@ -4,7 +4,7 @@
     --background-transparent: rgba(237, 237, 237, 0);
     --text-color: #1e1e1e;
     --container-color: rgba(255, 255, 255, 1.0);
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-colorsubtle: rgba(0, 0, 0, 0.03);
     --notice-color: rgba(255, 215, 58, 0.7);
 }
@@ -16,7 +16,7 @@
         --background-transparent: rgba(17, 17, 17, 0);
         --text-color: #f4f4f4;
         --container-color: rgba(255, 255, 255, 0.01);
-        --shadow-color: rgba(255, 255, 255, 0.3);
+        --shadow-color: rgba(255, 255, 255, 0.1);
         --shadow-colorsubtle: rgba(255, 255, 255, 0.03);
         --notice-color: rgba(255, 222, 92, 0.8);
     }
@@ -34,7 +34,7 @@ body {
 }
 
 .alert {
-    z-index: 10;
+    z-index: 9;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -49,12 +49,62 @@ body {
 }
 
 .welcome-text {
-    font-size: 24px;
-    font-family: "EL", system-ui, -apple-system;
-    font-weight: normal;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--shadow-colorsubtle);
+    color: var(--text-color);
+    border-radius: 10px;
     opacity: 0;
     position: fixed;
     transition: opacity 0.2s ease-in-out, transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    z-index: 10;
+}
+
+#welcome {
+    font-size: 32px;
+    font-family: "Slim";
+    margin: 0%;
+}
+
+#wcmexp {
+    font-size: 16px;
+    font-family: "EL";
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.passcodeboard {
+    width: 300px;
+    padding: 20px;
+    color: var(--text-color);
+}
+  
+  
+.digits {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+  
+input {
+    width: 20px;
+    height: 40px;
+    padding: 10px;
+    font-family: "EL";
+    color: var(--text-color);
+    background: var(--container-color);
+    border: 2px solid var(--shadow-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    transition: border-color 0.1s ease-in-out;
+}
+
+input:focus {
+    outline: 0;
+    background: var(--shadow-colorsubtle);
 }
 
 .main {
@@ -68,7 +118,7 @@ body {
 /* transformation required*/
 .Header, .box, .above {
     opacity: 0;
-    transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985); 
+    transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-in-out; 
 }
 
 .box {
@@ -77,6 +127,7 @@ body {
     justify-content: space-between;
     margin: 10px;
     margin-top: 0px;
+    filter: blur(20px);
 }
 
 .above {
@@ -120,6 +171,10 @@ h1 {
 
 h1.scrolled {
     transition: width 0.1s linear;
+}
+
+h2 {
+    color: var(--text-color);
 }
 
 .clipped {
@@ -221,7 +276,7 @@ p {
 /* filler height aff title wrapping */
 @media (max-width: 270px) {
     .filler {
-        height: 170px;
+        height: 170px !important;
     }
     #ctop {
         height: 150px;
