@@ -11,15 +11,11 @@
     <title>Zhere Next</title>
 </head>
 <body>
-    <div class="alert" id="alertfull">
-        <p>⚠</p>
-        <p>This page cannot be displayed at the current size.</p>
-        <p>无法在这个大小下展示页面。</p>
-    </div>
+
     <div class="welcome-text">
         <div class="passcodeboard">
           <form action="#">
-            <p id="welcome">Passcode Required</p>
+            <p class="welcometexted" id="welcome">Passcode Required</p>
             <p id="wcmexp">Proceed to Zhere Next</p>
             <div class="digits">
               <input type="tel" name="passcode1" maxlength="1" oninput="this.nextElementSibling.focus()">
@@ -27,7 +23,7 @@
               <input type="tel" name="passcode3" maxlength="1" oninput="this.nextElementSibling.focus()">
               <input type="tel" name="passcode4" maxlength="1" oninput="this.nextElementSibling.focus()">
               <input type="tel" name="passcode5" maxlength="1" oninput="this.nextElementSibling.focus()">
-              <input type="tel" name="passcode6" maxlength="1">
+              <input type="tel" name="passcode6" maxlength="1" class="lastinput">
             </div>
           </form>
         </div>
