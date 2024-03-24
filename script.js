@@ -52,9 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             else {
                 Header.style.transform = "translateY(0px)"
-                Header.style.opacity = 1;
                 Ctop.style.transform = "translateY(0px)"
                 Filler.style.height = orgheight;
+                setTimeout(function() {
+                    Header.style.opacity = 1;                    
+                },200);
             }
         });
     }, 2200);
