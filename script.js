@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (passcode === '352636') {
 //--------------------------------------------------------------------------------
 
-        welcomeText.focus();
+        input.blur();
 
         window.scrollTo({
             top:0,
