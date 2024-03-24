@@ -62,6 +62,13 @@ body {
     margin-top: 5px;
 }
 
+#devexp {
+    font-size: 16px;
+    font-family: "EL";
+    opacity: 0.4;
+    margin-top: 10px;
+}
+
 .passcodeboard {
     width: 300px;
     padding: 20px;
@@ -73,7 +80,7 @@ body {
 .digits {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
 }
   
 input {
@@ -275,6 +282,9 @@ p {
     }
     .block {
         width: calc(50% - 53px) !important;
+    }
+    #devexp {
+        opacity: 0;
     }
 }
 
