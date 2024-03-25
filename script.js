@@ -157,9 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         Box2.style.filter = "blur(20px)";
                         Box2.style.opacity = 0.3;
                         Box2.style.scale = 0.95;
-                        Salert.style.opacity = 0.5;
-                        Salert.style.zIndex = 4;
-                        Salert.style.filter = "blur(0px)";
                     },300)
                     
                 }
