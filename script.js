@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const Above = document.querySelectorAll(".above");
     const Filler = document.querySelector(".filler");
     const Ctop = document.getElementById("ctop");
+    const Salert = document.getElementById('sensitivemobile')
+
     const toady = new Date();
     const GK = new Date(toady.getFullYear(), 5, 11);
     const timebtwnG = GK.getTime() - toady.getTime();
@@ -113,11 +115,19 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }, 300);
 
+        Salert.addEventListener('click', function() {
+            window.scrollBy(0, 1);
+        });
+
+        setTimeout(function() {
+            Salert.style.opacity = 0.5;
+        }, 600);
+
         var orgheight = getComputedStyle(Filler).height;
 
         setTimeout(function() {
             window.addEventListener("scroll", function() {
-                const scroll=window.scrollY > 1;
+                const scroll=window.scrollY > 0;
                 Header.classList.toggle("scrolled", scroll);
                 if (scroll) {
                     Header.style.transform = "translateY(-70px)"
@@ -132,6 +142,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     Box2.style.scale = 1;
                     Box2.style.filter = "blur(0px)";
                     Box2.style.opacity = 1;
+                    Salert.style.opacity = 0;
+                    Salert.style.zIndex = 0;
+                    Salert.style.filter = "blur(10px)";
                 }
                 else {
                     Header.style.transform = "translateY(0px)"
@@ -144,7 +157,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         Box2.style.filter = "blur(20px)";
                         Box2.style.opacity = 0.3;
                         Box2.style.scale = 0.95;
+                        Salert.style.opacity = 0.5;
+                        Salert.style.zIndex = 4;
+                        Salert.style.filter = "blur(0px)";
                     },300)
+                    
                 }
             });
         }, 300);
