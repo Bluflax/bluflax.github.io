@@ -6,7 +6,7 @@
     --container-color: rgba(255, 255, 255, 1.0);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-colorsubtle: rgba(0, 0, 0, 0.03);
-    --notice-color: rgba(255, 215, 58, 0.7);
+    --notice-color: rgb(207, 55, 32, 0.7);
 }
 
 /* 深色模式下的样式 */
@@ -250,14 +250,32 @@ p {
     opacity: 0.6;
 }
 
-#info {
+.float {
     z-index: 4;
     position: fixed;
+    font-family: "EL", system-ui, -apple-system;
+}
+
+#info {
     bottom: 7px;
     left: 10px;
     opacity: 0.3;
     font-size: 7px;
+}
+
+#sensitivemobile {
     font-family: "EL", system-ui, -apple-system;
+    z-index: 4;
+    position: absolute;
+    color: var(--text-color);
+    bottom: 20%;
+    left: 50%;
+    width: fit-content;
+    text-align: center;
+    opacity: 0;
+    font-size: 16px;
+    transform: translateX(-50%);
+    transition: opacity 0.2s ease-out, filter 0.3s ease-out;
 }
 
 /* phone view */
@@ -289,6 +307,15 @@ p {
     .block {
         width: calc(100% - 53px) !important;
     }
+    #sensitivemobile {
+        bottom: 9%;
+    }
+}
+
+@media (max-height: 500px) {
+    #sensitivemobile {
+        opacity: 0 !important;
+    }
 }
 
 /* filler height aff title wrapping */
@@ -298,6 +325,9 @@ p {
     }
     #ctop {
         height: 150px;
+    }
+    #sensitivemobile {
+        opacity: 0 !important;
     }
 }
 
