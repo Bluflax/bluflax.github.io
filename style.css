@@ -308,11 +308,11 @@ p {
         width: calc(100% - 53px) !important;
     }
     #sensitivemobile {
-        bottom: 9%;
+        bottom: calc(40% - 220px);
     }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 600px) {
     #sensitivemobile {
         opacity: 0 !important;
     }
