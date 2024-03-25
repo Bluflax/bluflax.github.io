@@ -36,13 +36,11 @@ body {
 
 
 .welcome-text {
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: var(--shadow-colorsubtle);
     color: var(--text-color);
-    border-radius: 10px;
     opacity: 0;
     position: fixed;
     transition: opacity 0.2s ease-in-out, transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -103,6 +101,7 @@ input:focus {
 }
 
 .main {
+    z-index: 2;
     text-align: center;
     margin-top: 30px;
     align-items: flex-start;
@@ -116,7 +115,7 @@ input:focus {
 
 /* transformation required*/
 .Header, .box, .above {
-    transition: opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out; 
+    transition: opacity 0.2s ease-in-out, scale 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out; 
 }
 
 .box {
@@ -129,7 +128,8 @@ input:focus {
 
 #box2 {
     filter: blur(20px);
-    opacity: 0.2;
+    opacity: 0.3;
+    scale: 0.95;
 }
 
 .above {
@@ -138,7 +138,6 @@ input:focus {
     padding: 5px;
     margin-left: 23px;
     font-size: 20px;
-    z-index: 1;
 }
 
 .block {
@@ -152,7 +151,6 @@ input:focus {
     border-radius: 10px;
     border: 1px solid var(--shadow-colorsubtle);
     background-color: var(--container-color);
-    z-index: 2;
 }
 
 .cardimg {
@@ -199,13 +197,13 @@ h2 {
     z-index: 3;
     position: fixed;
     left: 0px;
-    width:200vh;
-    left: 0px;
-    transition: transform 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000); ;
+    width:100%;
+    transition: opacity 0.2s ease-in-out, transform 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000); ;
 }
 
+
 .filler {
-    height: 120px;
+    height: 130px;
     transition: height 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000); 
 }
 
@@ -215,8 +213,10 @@ h2 {
 
 #ctop {
     height: 120px;
+    transform: translateY(-50px);
     top: 0px;
     background: linear-gradient(to bottom, var(--background-color) 60%, var(--background-transparent));
+    opacity: 0;
 }
 
 #cbottom {
@@ -251,7 +251,7 @@ p {
 }
 
 #info {
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     bottom: 7px;
     left: 10px;
@@ -261,7 +261,7 @@ p {
 }
 
 /* phone view */
-@media (max-width: 924px) {
+@media (max-width: 768px) {
     .main {
         text-align: left;
         justify-content: flex-start;
