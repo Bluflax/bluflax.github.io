@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const Box2 = document.getElementById("box2");
     const Above = document.querySelectorAll(".above");
     const Filler = document.querySelector(".filler");
-    const Ctop = document.querySelector(".clipped");
+    const Ctop = document.getElementById("ctop");
     const toady = new Date();
     const GK = new Date(toady.getFullYear(), 5, 11);
     const timebtwnG = GK.getTime() - toady.getTime();
@@ -17,12 +17,24 @@ document.addEventListener("DOMContentLoaded", function() {
     var src3 = img3.getAttribute('data-src');
     var img4 = this.getElementById('imgblk4');
     var src4 = img4.getAttribute('data-src');
+    var img5 = this.getElementById('imgblk5');
+    var src5 = img5.getAttribute('data-src');
+    var img7 = this.getElementById('imgblk7');
+    var src7 = img7.getAttribute('data-src');
+    var img8 = this.getElementById('imgblk8');
+    var src8 = img8.getAttribute('data-src');
 
         function imgloaded() {
             img3.setAttribute('src', src3);
             img3.removeAttribute('data-src');
             img4.setAttribute('src', src4);
             img4.removeAttribute('data-src');
+            img5.setAttribute('src', src5);
+            img5.removeAttribute('data-src');
+            img7.setAttribute('src', src7);
+            img7.removeAttribute('data-src');
+            img8.setAttribute('src', src8);
+            img8.removeAttribute('data-src');
         }
 
     const inputs = document.querySelectorAll('.digits input');
@@ -75,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.scrollTo({
             top:0,
-            behaviou: 'auto'
+            behaviour: 'auto'
         })
 
         document.body.style.overflowY = "auto";
@@ -115,8 +127,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         Header.style.filter = "blur(0px)";                 
                     },200);
                     Header.style.transition = "opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.210, 0.000, 0.000, 1.000), filter 0.4s ease-in-out";
-                    Ctop.style.transform = "translateY(-50px)";
+                    Ctop.style.opacity = 1;
                     Filler.style.height = "60px";
+                    Box2.style.scale = 1;
                     Box2.style.filter = "blur(0px)";
                     Box2.style.opacity = 1;
                 }
@@ -125,11 +138,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     setTimeout(function() {
                         Header.style.opacity = 1;                    
                     },200);
-                    Ctop.style.transform = "translateY(0px)"
+                    Ctop.style.opacity = 0;
                     Filler.style.height = orgheight;
                     this.setTimeout(function() {
                         Box2.style.filter = "blur(20px)";
-                        Box2.style.opacity = 0.2;
+                        Box2.style.opacity = 0.3;
+                        Box2.style.scale = 0.95;
                     },300)
                 }
             });
