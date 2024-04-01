@@ -3,10 +3,14 @@
     --background-color: #EDEDED;
     --background-transparent: rgba(237, 237, 237, 0);
     --text-color: #1e1e1e;
+    --text-colorreverse: #f4f4f4;
     --container-color: rgba(255, 255, 255, 1.0);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-colorsubtle: rgba(0, 0, 0, 0.03);
-    --notice-color: rgb(207, 55, 32, 0.7);
+    --notice-color: rgba(207, 55, 32, 0.7);
+    --notice-colordim: rgba(207, 55, 32, 0.3);
+    --notice-colorsubtle:rgba(207, 55, 32, 0.1);
+    --notice-colorstress: rgba(165, 75, 61, 1);
 }
 
 /* 深色模式下的样式 */
@@ -15,10 +19,14 @@
         --background-color: #111111;
         --background-transparent: rgba(17, 17, 17, 0);
         --text-color: #f4f4f4;
+        --text-colorreverse: #1e1e1e;
         --container-color: rgba(255, 255, 255, 0.01);
         --shadow-color: rgba(255, 255, 255, 0.1);
         --shadow-colorsubtle: rgba(255, 255, 255, 0.03);
-        --notice-color: rgba(255, 222, 92, 0.8);
+        --notice-color: rgba(255, 216, 61, 0.8);
+        --notice-colordim: rgba(255, 222, 92, 0.3);
+        --notice-colorsubtle: rgba(255, 222, 92, 0.1);
+        --notice-colorstress: rgba(255, 236, 162, 1);
     }
 }
 
@@ -60,18 +68,11 @@ body {
     margin-top: 5px;
 }
 
-#devexp {
-    font-size: 16px;
-    font-family: "EL";
-    opacity: 0.4;
-    margin-top: 10px;
-}
-
 .passcodeboard {
     width: 300px;
     padding: 20px;
     color: var(--text-color);
-    transform: translateY(-30px);
+    transform: translateY(10%);
 }
   
   
@@ -80,7 +81,36 @@ body {
     justify-content: space-between;
     margin-top: 20px;
 }
+
+.boxnotice {
+    position: absolute;
+    width: calc(100% - 40px);
+    font-family: 'EL';
+    opacity: 0;
+    margin-top: 10px;
+}
   
+.note {
+    margin: 0 0 0px 0;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid var(--notice-colorsubtle);
+    color: var(--notice-colorstress);
+    background-color: var(--notice-colorsubtle);
+}
+
+.loginbtn {
+    text-align: center;
+    padding: 8px 0px 8px 0;
+    font-size: 16px;
+    font-family: 'EL';
+    border-radius: 0 0 5px 5px;
+    color: var(--text-colorreverse);
+    border: 0px solid var(--notice-colorsubtle);
+    background-color: var(--notice-color);
+}
+
+
 input {
     width: 20px;
     height: 40px;
@@ -169,7 +199,7 @@ input:focus {
 
 #blk2 {
     color: #1e1e1e;
-    background-image: url("https://s2.loli.net/2024/03/25/kJ92Xp81o4AQmLf.png");
+    background-image: url("https://picloud.cc/images/2024/03/31/f8a8baac7c3ef2bdd1f336605cbda841.png");
     background-size: 110% auto;
     background-position: center;
 }
@@ -231,6 +261,10 @@ p {
 
 .stressed {
     font-family: "Median";
+}
+
+.underlined {
+    text-decoration: underline;
 }
 
 .big {
