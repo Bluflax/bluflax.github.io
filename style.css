@@ -86,7 +86,9 @@ body {
 
 .boxnotice {
     position: absolute;
-    width: calc(100% - 40px);
+    width: calc(70%);
+    max-width: 350px;
+    top: 20px;
     font-family: 'EL';
     opacity: 0;
     margin-top: 10px;
@@ -147,7 +149,7 @@ input:focus {
 
 /* transformation required*/
 .Header, .box, .above {
-    transition: opacity 0.2s ease-in-out, scale 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out; 
+    transition: opacity 0.2s ease-in-out, scale 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), transform 0.7s cubic-bezier(0.245, 1.215, 0.360, 0.985), filter 0.4s ease-out, height 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000); 
 }
 
 .box {
@@ -259,6 +261,12 @@ h2 {
 
 p {
     font-family: "EL", system-ui, -apple-system;
+}
+
+.gotos {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
 .stressed {
