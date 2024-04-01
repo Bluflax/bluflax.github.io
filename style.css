@@ -44,6 +44,8 @@ body {
 
 
 .welcome-text {
+    position: fixed;
+    top: calc(30% - 30px);
     display: flex;
     justify-content: center;
     align-items: center;
