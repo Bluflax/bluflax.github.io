@@ -5,10 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const Box = document.querySelectorAll(".box");
     const Box2 = document.getElementById("box2");
     const Above = document.querySelectorAll(".above");
-    const Ab2 = document.getElementById('above2')
+    const ColExp = document.getElementById('ColExp')
     const Filler = document.querySelector(".filler");
     const Ctop = document.getElementById("ctop");
-    const Salert = document.getElementById('sensitivemobile');
+    const Salert = document.getElementById('showsensitive');
+    const Noaccess = document.querySelectorAll('.noaccess')
 
     const toady = new Date();
     const GK = new Date(toady.getFullYear(), 5, 11);
@@ -123,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 100);
 
                 setTimeout(function() {
+                    welcomeText.style.display = 'none';
                     main.style.filter = "blur(0px)";
                     main.style.opacity = 1;
                     Header.style.transform = "translateY(-0px)";
@@ -137,14 +139,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (passcode === '352636'){
                     imgloaded();
-                    setTimeout(function() {
-                        Salert.style.opacity = 0.5;
-                    }, 600);
+                    ColExp.style.display = 'flex';
+                    Salert.style.display = 'flex';
+                    Noaccess.forEach(noaccess => {
+                        noaccess.style.display = 'none';
+                    });
+                    Box2.style.display = 'flex';
                     Salert.addEventListener('click', function() {
                         window.scrollBy(0, 1);
                         Salert.style.opacity = 0;
-                        Salert.style.zIndex = 0;
                         Salert.style.filter = "blur(10px)";
+                        ColExp.style.transform = 'scaleY(1)';
+                        ColExp.style.filter = 'blur(0px)';
+                        Box2.style.display = 'flex';
+                        ColExp.style.transform = 'scaleY(-1) scaleX(0.8) translateY(-6px)';
+                        setTimeout(function() {
+                            Salert.style.display = 'none';
+                        }, 200);
                         window.addEventListener("scroll", function() {
                             const scroll=window.scrollY > 0;
                             Header.classList.toggle("scrolled", scroll);
@@ -161,6 +172,18 @@ document.addEventListener("DOMContentLoaded", function() {
                                 },300)                     
                             }
                         });
+                    });
+
+                    let colrev = false;
+
+                    ColExp.addEventListener('click', function() {
+                        colrev = !colrev;
+                        ColExp.style.transform = colrev ? 'scaleY(1) scaleX(0.8)' : 'scaleY(-1) scaleX(0.8) translateY(-6px)';
+                        if (colrev) {
+                            Box2.style.display = 'none';
+                        } else {
+                            Box2.style.display = 'flex';
+                        }
                     });
                 };
 
@@ -194,6 +217,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //--------------------------------------------------------------------------------
+        } else if (passcode === 'devmode') {
+
         } else {
                 inputs.forEach((input, index) => {
                 input.value = '';
