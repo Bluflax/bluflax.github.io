@@ -2,6 +2,7 @@
 :root {
     --background-color: #EDEDED;
     --background-transparent: rgba(237, 237, 237, 0);
+    --background-seethrough: rgba(237, 237, 237, 0.5);
     --text-color: #1e1e1e;
     --text-colorreverse: #f4f4f4;
     --container-color: rgba(255, 255, 255, 1.0);
@@ -18,6 +19,7 @@
     :root {
         --background-color: #111111;
         --background-transparent: rgba(17, 17, 17, 0);
+        --background-seethrough: rgba(17, 17, 17, 0.5);
         --text-color: #f4f4f4;
         --text-colorreverse: #1e1e1e;
         --container-color: rgba(255, 255, 255, 0.01);
@@ -135,6 +137,7 @@ input:focus {
 }
 
 .main {
+    display: none;
     z-index: 2;
     text-align: center;
     margin-top: 30px;
@@ -142,9 +145,9 @@ input:focus {
     height: 100vh;
     width: 100%;
     z-index: 2;
-    filter: blur(20px);
+    filter: blur(0px);
     opacity: 0;
-    transition: filter 0.4s ease-out, opacity 0.5s ease-out, height 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000);
+    transition: filter 0.2s ease-out, opacity 0.2s ease-out, height 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000);
 }
 
 /* transformation required*/
@@ -176,7 +179,7 @@ input:focus {
     font-size: 20px;
 }
 
-.showhide {
+.nshowhide {
     position: absolute;
     display: none;
     left: 75px;
@@ -203,7 +206,7 @@ input:focus {
     transition: opacity 0.2s ease-out, filter 0.3s ease-out;
 }
 
-.noaccess {
+.noaccess, .showhide {
     position: absolute;
     font-family: "EL", system-ui, -apple-system;
     color: var(--text-color);
@@ -259,6 +262,10 @@ h1 {
     font-size: 40px;
     font-family: "SW", system-ui, -apple-system;
     font-weight: normal;
+    background: radial-gradient(120px 50px at 40% 10%, rgba(255, 255, 255, 0.6), rgb(255, 255, 255)) text;
+    -webkit-text-fill-color: transparent;
+    color: unset;
+
 }
 
 h1.scrolled {
@@ -270,10 +277,11 @@ h2 {
 }
 
 .clipped {
-    z-index: 3;
+    z-index: 11;
     position: fixed;
     left: 0px;
     width:100%;
+    filter: blur(20px);
     transition: opacity 0.2s ease-in-out, transform 0.6s cubic-bezier(0.4, 0.000, 0.3, 1.000); ;
 }
 
@@ -288,10 +296,10 @@ h2 {
 }
 
 #ctop {
-    height: 120px;
+    height: 60px;
     transform: translateY(-50px);
     top: 0px;
-    background: linear-gradient(to bottom, var(--background-color) 60%, var(--background-transparent));
+    background: var(--background-seethrough);
     opacity: 0;
 }
 
@@ -348,6 +356,76 @@ p {
     opacity: 0.3;
     font-size: 7px;
 }
+
+.gradient-blur {
+    position: fixed;
+    z-index: 5;
+    inset: 0 0 auto 0;
+    height: 80px;
+    pointer-events: none;
+  }
+  .gradient-blur > div,
+  .gradient-blur::before,
+  .gradient-blur::after {
+    position: absolute;
+    inset: 0;
+  }
+  .gradient-blur::before {
+    content: "";
+    z-index: 1;
+    backdrop-filter: blur(0.5px);
+    mask: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+  .gradient-blur > div:nth-of-type(1) {
+    z-index: 12;
+    backdrop-filter: blur(1px);
+    mask: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 1) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .gradient-blur > div:nth-of-type(2) {
+    z-index: 13;
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 1) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .gradient-blur > div:nth-of-type(3) {
+    z-index: 14;
+    backdrop-filter: blur(4px);
+    mask: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 75%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  .gradient-blur::after {
+    content: "";
+    z-index: 15;
+    backdrop-filter: blur(8px);
+    mask: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+
 
 /* phone view */
 @media (max-width: 768px) {
