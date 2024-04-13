@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.style.overflowY = "hidden";
 
-    main.style.opacity = 0.3;
-
     setTimeout(function() {
         welcomeText.style.opacity = "1";
         Header.style.transform = "translateY(30px)";
@@ -107,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 Lastinput.blur();
 
+                main.style.display = 'block';
+
 
                 window.scrollTo({
                     top:0,
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     Above.forEach(above => {
                         above.style.transform = "translateY(-0px)";
                     });
-                }, 300);
+                }, 200);
               
 
                 if (passcode === '352636'){
@@ -147,44 +147,23 @@ document.addEventListener("DOMContentLoaded", function() {
                     Box2.style.display = 'flex';
                     Salert.addEventListener('click', function() {
                         window.scrollBy(0, 1);
-                        Salert.style.opacity = 0;
-                        Salert.style.filter = "blur(10px)";
-                        ColExp.style.transform = 'scaleY(1)';
-                        ColExp.style.filter = 'blur(0px)';
-                        Box2.style.display = 'flex';
-                        ColExp.style.transform = 'scaleY(-1) scaleX(0.8) translateY(-6px)';
-                        setTimeout(function() {
-                            Salert.style.display = 'none';
-                        }, 200);
-                        window.addEventListener("scroll", function() {
-                            const scroll=window.scrollY > 0;
-                            Header.classList.toggle("scrolled", scroll);
-                            if (scroll) {
-                                Box2.style.scale = 1;
-                                Box2.style.filter = "blur(0px)";
-                                Box2.style.opacity = 1;
-                            }
-                            else {
-                                this.setTimeout(function() {
-                                    Box2.style.filter = "blur(20px)";
-                                    Box2.style.opacity = 0.3;
-                                    Box2.style.scale = 0.95;
-                                },300)                     
-                            }
-                        });
+                        //ColExp.style.transform = 'scaleY(1)';
+                        //ColExp.style.filter = 'blur(0px)';
+                        //Box2.style.display = 'flex';
+                        //ColExp.style.transform = 'scaleY(-1) scaleX(0.8) translateY(-6px)';
                     });
 
-                    let colrev = false;
+                    //let colrev = false;
 
-                    ColExp.addEventListener('click', function() {
-                        colrev = !colrev;
-                        ColExp.style.transform = colrev ? 'scaleY(1) scaleX(0.8)' : 'scaleY(-1) scaleX(0.8) translateY(-6px)';
-                        if (colrev) {
-                            Box2.style.display = 'none';
-                        } else {
-                            Box2.style.display = 'flex';
-                        }
-                    });
+                    //ColExp.addEventListener('click', function() {
+                        //colrev = !colrev;
+                        //ColExp.style.transform = colrev ? 'scaleY(1) scaleX(0.8)' : 'scaleY(-1) scaleX(0.8) translateY(-6px)';
+                        //if (colrev) {
+                            //Box2.style.display = 'none';
+                        //} else {
+                            //Box2.style.display = 'flex';
+                        //}
+                    //});
                 };
 
                 var orgheight = getComputedStyle(Filler).height;
@@ -194,6 +173,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         const scroll=window.scrollY > 0;
                         Header.classList.toggle("scrolled", scroll);
                         if (scroll) {
+                            Salert.style.opacity = 0;
+                            Salert.style.filter = "blur(10px)";
+                            Box2.style.scale = 1;
+                            Box2.style.filter = "blur(0px)";
+                            Box2.style.opacity = 1;
                             Header.style.transform = "translateY(-70px)"
                             Header.style.opacity = 0;
                             Header.style.filter = "blur(20px)";
@@ -203,8 +187,16 @@ document.addEventListener("DOMContentLoaded", function() {
                             Header.style.transition = "opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.210, 0.000, 0.000, 1.000), filter 0.4s ease-in-out";
                             Ctop.style.opacity = 1;
                             Filler.style.height = "60px";
+                            setTimeout(function() {
+                                Salert.style.display = 'none';
+                            }, 200);
                         }
                         else {
+                            this.setTimeout(function() {
+                                Box2.style.filter = "blur(20px)";
+                                Box2.style.opacity = 0.3;
+                                Box2.style.scale = 0.95;
+                            },300)    
                             Header.style.transform = "translateY(0px)"
                             setTimeout(function() {
                                 Header.style.opacity = 1;                    
