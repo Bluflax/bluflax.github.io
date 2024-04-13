@@ -4,6 +4,7 @@
     --background-transparent: rgba(237, 237, 237, 0);
     --background-seethrough: rgba(237, 237, 237, 0.5);
     --text-color: #1e1e1e;
+    --text-colordim: rgba(17, 17, 17, 0.5);
     --text-colorreverse: #f4f4f4;
     --container-color: rgba(255, 255, 255, 1.0);
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -21,6 +22,7 @@
         --background-transparent: rgba(17, 17, 17, 0);
         --background-seethrough: rgba(17, 17, 17, 0.5);
         --text-color: #f4f4f4;
+        --text-colordim: rgba(237, 237, 237, 0.6);
         --text-colorreverse: #1e1e1e;
         --container-color: rgba(255, 255, 255, 0.01);
         --shadow-color: rgba(255, 255, 255, 0.1);
@@ -40,7 +42,6 @@ body {
     height: 100vh;
     margin: 0;
     color: var(--text-color);
-    /*background-color: var(--background-color);*/
     background-color: var(--background-color);
 }
 
@@ -262,7 +263,7 @@ h1 {
     font-size: 40px;
     font-family: "SW", system-ui, -apple-system;
     font-weight: normal;
-    background: radial-gradient(120px 50px at 40% 10%, rgba(255, 255, 255, 0.6), rgb(255, 255, 255)) text;
+    background: radial-gradient(120px 50px at 40% 10%, var(--text-colordim), var(--text-color)) text;
     -webkit-text-fill-color: transparent;
     color: unset;
 
