@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const Filler = document.querySelector(".filler");
     const Ctop = document.getElementById("ctop");
     const Salert = document.getElementById('showsensitive');
-    const Noaccess = document.querySelectorAll('.noaccess')
+    const Noaccess = document.querySelectorAll('.noaccess');
+    const Toggle = document.querySelectorAll('.toggle');
 
     const toady = new Date();
     const GK = new Date(toady.getFullYear(), 5, 11);
@@ -122,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     welcomeText.style.zIndex = '0';
 
                 }, 100);
+
+                Toggle.forEach(toggle => {
+                    toggle.addEventListener('change', function() {
+                        Haptics.tap();
+                    });
+                });
 
                 setTimeout(function() {
                     welcomeText.style.display = 'none';
