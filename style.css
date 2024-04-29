@@ -13,6 +13,7 @@
     --notice-colordim: rgba(207, 55, 32, 0.3);
     --notice-colorsubtle:rgba(207, 55, 32, 0.1);
     --notice-colorstress: rgba(165, 75, 61, 1);
+    --agreed-color: #65c466;
 }
 
 /* 深色模式下的样式 */
@@ -31,6 +32,7 @@
         --notice-colordim: rgba(255, 222, 92, 0.3);
         --notice-colorsubtle: rgba(255, 222, 92, 0.1);
         --notice-colorstress: rgba(255, 236, 162, 1);
+        --agreed-color: #68CE67;
     }
 }
 
@@ -136,6 +138,61 @@ input:focus {
     outline: 0;
     background: var(--shadow-colorsubtle);
 }
+
+/*-----------------------------------------------------------------*/
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40.6px;
+    height: 24px;
+    background: var(--shadow-colorsubtle);
+    display: block;
+    border-radius: 100px;
+    border: 1.5px solid var(--shadow-color);
+    position: relative;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 0.6px;
+    left: 0.6px;
+    width: 22.8px;
+    height: 22.8px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  input:checked + label {
+    background: var(--agreed-color);
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 0.6px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 26px;
+  }
+  
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  /*-----------------------------------------------------------------*/
 
 .main {
     display: none;
