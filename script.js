@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.scrollTo({
                     top:0,
                     behaviour: 'auto'
-                })
+                });
 
                 document.body.style.overflowY = "auto";
 
@@ -152,6 +152,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         });
                         Filler.classList.add('beta');
                         f3.classList.add('beta');
+                        window.scrollTo({
+                            top:0
+                        });
                     } else {
                         Header.classList.remove('beta');
                         Above.forEach(above => {
@@ -159,6 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         });
                         Filler.classList.remove('beta'); 
                         f3.classList.remove('beta');
+                        window.scrollTo({
+                            top:0
+                        });
                     }
                 });
                 
@@ -179,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(function() {
                     window.addEventListener("scroll", function() {
                         const scroll=window.scrollY > 0;
-                        Header.classList.toggle("scrolled", scroll);
                         if (scroll) {
                             var orgheight3 = getComputedStyle(f3).height;
                             Salert.style.opacity = 0;
