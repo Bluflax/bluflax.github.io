@@ -345,6 +345,7 @@ h2 {
     border: 0px;
     background-color: rgba(237, 237, 237, 0.7);
     backdrop-filter: blur(20px);
+    --webkit-backdrop-filter: blur(20px);
     font-family: "EL", system-ui, -apple-system;
     font-size: 16px;
     color: var(--text-colorreverse);
