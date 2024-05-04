@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const Box = document.querySelectorAll(".box");
     const Box2 = document.getElementById("box2");
     const Above = document.querySelectorAll(".above");
-    const ColExp = document.getElementById('ColExp')
     const Filler = document.querySelector(".filler");
-    const Ctop = document.getElementById("ctop");
     const Salert = document.getElementById('showsensitive');
     const Noaccess = document.querySelectorAll('.noaccess');
-    const Toggle = document.querySelectorAll('.toggle');
+    const f3 = document.getElementById('f3');
+    const pannelfloat = document.querySelector('.pannelfloat');
 
     const toady = new Date();
     const GK = new Date(toady.getFullYear(), 5, 11);
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img7.removeAttribute('data-src');
             img8.setAttribute('src', src8);
             img8.removeAttribute('data-src');
-        }
+        };
 
     const inputs = document.querySelectorAll('.digits input');
     const Lastinput = document.querySelector(".lastinput");
@@ -123,12 +122,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     welcomeText.style.zIndex = '0';
 
                 }, 100);
+                
 
-                Toggle.forEach(toggle => {
-                    toggle.addEventListener('change', function() {
-                        Haptics.tap();
-                    });
-                });
 
                 setTimeout(function() {
                     welcomeText.style.display = 'none';
@@ -141,12 +136,36 @@ document.addEventListener("DOMContentLoaded", function() {
                     Above.forEach(above => {
                         above.style.transform = "translateY(-0px)";
                     });
+                    pannelfloat.style.display = 'block';
+                    pannelfloat.style.opacity = 1;
+                    //betacheck.checked = true;
+                    var event = new Event('change');
+                    betacheck.dispatchEvent(event);
                 }, 200);
-              
+
+                var betacheck = document.querySelector('#betacheck');
+                betacheck.addEventListener('change', function() {
+                    if (betacheck.checked) {
+                        Header.classList.add('beta');
+                        Above.forEach(above => {
+                            above.classList.add('beta');
+                        });
+                        Filler.classList.add('beta');
+                        f3.classList.add('beta');
+                    } else {
+                        Header.classList.remove('beta');
+                        Above.forEach(above => {
+                            above.classList.remove('beta');
+                        });
+                        Filler.classList.remove('beta'); 
+                        f3.classList.remove('beta');
+                    }
+                });
+                
+                var orgheight = getComputedStyle(Filler).height;
 
                 if (passcode === '352636'){
                     imgloaded();
-                    ColExp.style.display = 'flex';
                     Salert.style.display = 'flex';
                     Noaccess.forEach(noaccess => {
                         noaccess.style.display = 'none';
@@ -154,32 +173,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     Box2.style.display = 'flex';
                     Salert.addEventListener('click', function() {
                         window.scrollBy(0, 1);
-                        //ColExp.style.transform = 'scaleY(1)';
-                        //ColExp.style.filter = 'blur(0px)';
-                        //Box2.style.display = 'flex';
-                        //ColExp.style.transform = 'scaleY(-1) scaleX(0.8) translateY(-6px)';
                     });
-
-                    //let colrev = false;
-
-                    //ColExp.addEventListener('click', function() {
-                        //colrev = !colrev;
-                        //ColExp.style.transform = colrev ? 'scaleY(1) scaleX(0.8)' : 'scaleY(-1) scaleX(0.8) translateY(-6px)';
-                        //if (colrev) {
-                            //Box2.style.display = 'none';
-                        //} else {
-                            //Box2.style.display = 'flex';
-                        //}
-                    //});
                 };
-
-                var orgheight = getComputedStyle(Filler).height;
 
                 setTimeout(function() {
                     window.addEventListener("scroll", function() {
                         const scroll=window.scrollY > 0;
                         Header.classList.toggle("scrolled", scroll);
                         if (scroll) {
+                            var orgheight3 = getComputedStyle(f3).height;
                             Salert.style.opacity = 0;
                             Salert.style.filter = "blur(10px)";
                             Box2.style.scale = 1;
@@ -192,8 +194,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                 Header.style.filter = "blur(0px)";                 
                             },200);
                             Header.style.transition = "opacity 0.2s ease-in-out, transform 0.7s cubic-bezier(0.210, 0.000, 0.000, 1.000), filter 0.4s ease-in-out";
-                            Ctop.style.opacity = 1;
                             Filler.style.height = "60px";
+                            f3.classList.add('gamma');
+                            f3.style.opacity = 0;
+                            Filler.style.opacity = 0;
                             setTimeout(function() {
                                 Salert.style.display = 'none';
                             }, 200);
@@ -204,12 +208,14 @@ document.addEventListener("DOMContentLoaded", function() {
                                 Box2.style.opacity = 0.3;
                                 Box2.style.scale = 0.95;
                             },300)    
-                            Header.style.transform = "translateY(0px)"
+                            Header.style.transform = "translateY(0px)";
                             setTimeout(function() {
                                 Header.style.opacity = 1;                    
                             },200);
-                            Ctop.style.opacity = 0;
-                            Filler.style.height = orgheight;                       
+                            Filler.style.height = orgheight;  
+                            f3.classList.remove('gamma');
+                            f3.style.opacity = 1;             
+                            Filler.style.opacity = 1;
                         }
                     });
                 }, 300);
